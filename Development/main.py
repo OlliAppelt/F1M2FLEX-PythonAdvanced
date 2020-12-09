@@ -24,8 +24,16 @@ class Blauwdruk:
 
     Lives = 5
     Coins = 10
+    speed = 30
+    Item = None
+
     def __init__(self, Lives):
         self.Lives = Lives
+
+    def Walk(self) :
+        print("Je loopt nu: ", self.speed)
+
+    
 
 print("Blauwdruk.Lives", Blauwdruk.Lives)
 
@@ -34,11 +42,45 @@ Player1.Lives = 10
 
 print("Player1.Lives", Player1.Lives)
 
+class Character (Blauwdruk) :
+
+    HP = 50
+    Stamina = 12
+    speed = 30
+    
+    def __init__(self) :
+        super().__init__()
+
+        self.speed = 35
+
+    def Walk(self) :
+        print("Speed is +5 ", self.speed)
+
+    def Jump(self) :
+        print("Jump!")
+
+
+
+
+A = Blauwdruk
+B = Character
+
+A.Walk
+B.Walk
+B.Jump
+
+print(A.speed)
+print(B.speed)
+print(B.Lives)
+
+print(B)
+
+
+
 
 playerSprite = pygame.image.load("../Art/spr_Player.png")
 playerRect = playerSprite.get_rect()
 playerSpeed = 5
-
 
 while IS_RUNNING:
 

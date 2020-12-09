@@ -7,9 +7,7 @@ class Mario :
     def Test(self):
         print("Hallo")
         print("Speed is: ", self._speed)
-    
-    def __init__(self):
-        Instructies
+
 
 
 instanceMario = Mario()
